@@ -1,103 +1,159 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Freshta Habib Cybersecurity Portfolio</title>
+    .hero {
+        background: linear-gradient(135deg, #071a3d, #123c69);
+        color: white;
+        text-align: center;
+        padding: 70px 20px;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #1f2937;
-        }
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
 
-        .header {
-            background: #0f172a;
-            color: white;
-            padding: 60px;
-            text-align: center;
-        }
+    .hero p {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
 
-        .header h1 {
-            margin: 0;
-            font-size: 42px;
-        }
+    .button {
+        display: inline-block;
+        background: #2563eb;
+        color: white;
+        padding: 12px 20px;
+        margin: 6px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
 
-        .header p {
-            font-size: 18px;
-        }
+    .section {
+        background: white;
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 35px;
+        border-radius: 16px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
 
-        .section {
-            background: white;
-            margin: 30px auto;
-            padding: 30px;
-            max-width: 900px;
-            border-radius: 14px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
+    h2 {
+        color: #1d4ed8;
+    }
 
-        h2 {
-            color: #1d4ed8;
-        }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 16px;
+    }
 
-        ul {
-            padding-left: 20px;
-        }
+    .card {
+        background: #f8fafc;
+        padding: 18px;
+        border-radius: 12px;
+        border-left: 5px solid #2563eb;
+    }
 
-        li {
-            margin: 8px 0;
-        }
+    .card h3 {
+        margin-top: 0;
+        color: #0f172a;
+    }
 
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #6b7280;
-        }
-    </style>
-</head>
+    li {
+        margin: 9px 0;
+    }
 
-<body>
+    .footer {
+        text-align: center;
+        padding: 30px;
+        color: #64748b;
+    }
+</style>
+<div class="hero">
+    <h1>Freshta Habib</h1>
+    <p>Aspiring Cybersecurity Analyst | AWS Cloud Security | Linux | Security Operations</p>
+    <a class="button" href="mailto:freshtahabib77@gmail.com">Contact Me</a>
+    <a class="button" href="https://github.com/freshtahabib77-ops" target="_blank">View GitHub</a>
+</div>
 
-    <div class="header">
-        <h1>Freshta Habib</h1>
-        <p>Cybersecurity Student | AWS | Linux | Security Operations</p>
+<div class="section">
+    <h2>About Me</h2>
+    <p>
+        I am a cybersecurity student building hands on experience in AWS cloud security,
+        Linux administration, digital forensics, networking, security monitoring, and technical documentation.
+        My goal is to grow into a cybersecurity analyst role where I can help protect systems,
+        investigate security events, and support secure cloud environments.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+        <div class="card">AWS EC2</div>
+        <div class="card">Linux Administration</div>
+        <div class="card">Security Monitoring</div>
+        <div class="card">Log Analysis</div>
+        <div class="card">Networking</div>
+        <div class="card">Python</div>
+        <div class="card">GitHub</div>
+        <div class="card">Digital Forensics</div>
     </div>
+</div>
 
-    <div class="section">
-        <h2>About Me</h2>
-        <p>
-            Cybersecurity student focused on AWS Cloud Security,
-            Linux Administration, Digital Forensics,
-            and Security Operations.
-        </p>
+<div class="section">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>AWS Cybersecurity Lab Environment</h3>
+            <p>Created and documented cloud based cybersecurity labs using AWS EC2 and Ubuntu Linux.</p>
+        </div>
+
+        <div class="card">
+            <h3>Linux Security Monitoring</h3>
+            <p>Used Linux commands to inspect users, processes, permissions, logs, and system activity.</p>
+        </div>
+
+        <div class="card">
+            <h3>Process Monitoring Analysis</h3>
+            <p>Analyzed running processes and system resources to understand security and performance activity.</p>
+        </div>
+
+        <div class="card">
+            <h3>AI Detection Engine</h3>
+            <p>Developing a multimodal AI detection project focused on digital media transparency.</p>
+        </div>
     </div>
+</div>
 
-    <div class="section">
-        <h2>Cybersecurity Labs</h2>
+<div class="section">
+    <h2>Cybersecurity Labs</h2>
+    <ul>
+        <li>Lab 1: Linux Fundamentals</li>
+        <li>Lab 2: User and Group Management</li>
+        <li>Lab 3: Network Configuration</li>
+        <li>Lab 4: Web Server Security</li>
+        <li>Lab 5: Log Analysis</li>
+        <li>Lab 6: AWS Security Monitoring</li>
+        <li>Lab 7: Linux User Enumeration</li>
+        <li>Lab 8: File Permissions and Ownership</li>
+        <li>Lab 9: Process Monitoring and Analysis</li>
+        <li>Lab 10: Security Assessment Project</li>
+    </ul>
+</div>
 
-        <ul>
-            <li>Lab 1: Linux Fundamentals</li>
-            <li>Lab 2: User and Group Management</li>
-            <li>Lab 3: Network Configuration</li>
-            <li>Lab 4: Web Server Security</li>
-            <li>Lab 5: Log Analysis</li>
-            <li>Lab 6: AWS Security Monitoring</li>
-            <li>Lab 7: Linux User Enumeration</li>
-            <li>Lab 8: File Permissions and Ownership</li>
-            <li>Lab 9: Process Monitoring and Analysis</li>
-            <li>Lab 10: Security Assessment Project</li>
-        </ul>
-    </div>
+<div class="section">
+    <h2>Certifications</h2>
+    <ul>
+        <li>AWS Cloud Practitioner: In Progress</li>
+        <li>CompTIA Security+: Planned</li>
+        <li>Cisco CCNA: Planned</li>
+    </ul>
+</div>
 
-    <div class="section">
-        <h2>Contact</h2>
-        <p>Email: freshtahabib77@gmail.com</p>
-        <p>GitHub: freshtahabib77-ops</p>
-    </div>
+<div class="section">
+    <h2>Contact</h2>
+    <p>Email: freshtahabib77@gmail.com</p>
+    <p>GitHub: freshtahabib77-ops</p>
+</div>
 
-    <div class="footer">
-        © 2026 Freshta Habib | Cybersecurity Portfolio
-    </div>
-
-</body>
-</html>
+<div class="footer">
+    © 2026 Freshta Habib | Cybersecurity Portfolio | Built with GitHub Pages
+</div>
