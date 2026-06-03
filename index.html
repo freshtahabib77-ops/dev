@@ -1,56 +1,131 @@
- margin:40px;
-}
+Great. Paste this full code now:
 
-.container{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Freshta Habib Cybersecurity Portfolio</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
 }
-
-h1{
-    color:#1f4e79;
+.header {
+    background: #0f172a;
+    color: white;
+    padding: 50px;
+    text-align: center;
 }
-
-h2{
-    color:#2f5597;
+.header h1 {
+    font-size: 42px;
+    margin: 0;
 }
-
-li{
-    margin:8px 0;
+.header p {
+    font-size: 18px;
+}
+.section {
+    background: white;
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 900px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+h2 {
+    color: #1d4ed8;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+.card {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 12px;
+    border-left: 5px solid #2563eb;
+}
+.footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
 }
 </style>
-
 </head>
-
 <body>
 
-<div class="container">
+<div class="header">
+    <h1>Freshta Habib</h1>
+    <p>Cybersecurity Portfolio | AWS | Linux | Cloud Security</p>
+</div>
 
-<h1>Najma Habib</h1>
+<div class="section">
+    <h2>About Me</h2>
+    <p>
+        I am a cybersecurity student focused on AWS cloud security, Linux administration,
+        digital forensics, security operations, and AI driven media transparency.
+        This portfolio highlights my hands on cybersecurity labs and technical projects.
+    </p>
+</div>
 
-<h2>Cybersecurity Portfolio</h2>
+<div class="section">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+        <div class="card">AWS EC2 and Cloud Security</div>
+        <div class="card">Linux Command Line</div>
+        <div class="card">Log Analysis</div>
+        <div class="card">File Permissions</div>
+        <div class="card">Network Monitoring</div>
+        <div class="card">Security Documentation</div>
+    </div>
+</div>
 
-<p>
-Cybersecurity student focused on AWS Cloud Security, Linux Administration,
-Digital Forensics, and Security Operations.
-</p>
+<div class="section">
+    <h2>Cybersecurity Lab Series</h2>
+    <div class="grid">
+        <div class="card">Lab 1: Linux Fundamentals</div>
+        <div class="card">Lab 2: User and Group Management</div>
+        <div class="card">Lab 3: System Information</div>
+        <div class="card">Lab 4: User Permissions</div>
+        <div class="card">Lab 5: Linux Networking</div>
+        <div class="card">Lab 6: Linux Log Analysis</div>
+        <div class="card">Lab 7: User and Permission Auditing</div>
+        <div class="card">Lab 8: File Permissions and Security</div>
+        <div class="card">Lab 9: Process Monitoring and Resources</div>
+        <div class="card">Lab 10: Security Review Project</div>
+    </div>
+</div>
 
-<h2>Cybersecurity Labs</h2>
+<div class="section">
+    <h2>Projects</h2>
+    <div class="card">
+        <h3>AWS Cybersecurity Lab Environment</h3>
+        <p>
+            Built and documented a cloud based cybersecurity lab using AWS EC2 and Ubuntu Linux.
+            The project includes hands on practice with system monitoring, logs, permissions,
+            networking, and security analysis.
+        </p>
+    </div>
+    <br>
+    <div class="card">
+        <h3>AI Multimedia Detection Engine</h3>
+        <p>
+            Developing a multi modal AI detection project focused on digital media transparency
+            and identifying AI generated content.
+        </p>
+    </div>
+</div>
 
-<ul>
-<li>Lab 1: Linux Fundamentals</li>
-<li>Lab 2: User and Group Management</li>
-<li>Lab 3: Network Configuration</li>
-<li>Lab 4: Web Server Security</li>
-<li>Lab 5: Log Analysis</li>
-<li>Lab 6: AWS Security Monitoring</li>
-<li>Lab 7: Linux User Enumeration</li>
-<li>Lab 8: File Permissions and Ownership</li>
-<li>Lab 9: Process Monitoring and Analysis</li>
-<li>Lab 10: Security Assessment Project</li>
-</ul>
+<div class="section">
+    <h2>Contact</h2>
+    <p>Email: freshtahabib77@gmail.com</p>
+    <p>GitHub: freshtahabib77-ops</p>
+</div>
 
+<div class="footer">
+    <p>© 2026 Freshta Habib | Cybersecurity Portfolio</p>
 </div>
 
 </body>
