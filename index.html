@@ -3,47 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freshta Habib | Cybersecurity & Cloud Portfolio</title>
+    <title>Freshta Habib | Cloud Security & Infrastructure Engineering Portfolio</title>
     <style>
         :root {
-            --bg-color: #0a0f1d;
-            --card-bg: #111a2e;
-            --accent-blue: #00d2ff;
-            --accent-glow: rgba(0, 210, 255, 0.3);
-            --text-main: #e2e8f0;
-            --text-muted: #94a3b8;
-            --terminal-green: #39ff14;
+            --canvas-bg: #02040a;
+            --surface-glass: rgba(13, 22, 45, 0.7);
+            --surface-glass-hover: rgba(20, 35, 70, 0.95);
+            --neon-cyan: #00f0ff;
+            --neon-blue: #3b82f6;
+            --neon-purple: #8b5cf6;
+            --text-heading: #ffffff;
+            --text-body: #cbd5e1;
+            --text-dim: #64748b;
+            --border-glow: rgba(0, 240, 255, 0.2);
+            --card-shadow: rgba(0, 0, 0, 0.7);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'SF Pro Display', -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background-color: var(--canvas-bg);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
+                linear-gradient(rgba(255, 255, 255, 0.003) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.003) 1px, transparent 1px);
+            background-size: auto, auto, 40px 40px, 40px 40px;
+            color: var(--text-body);
             line-height: 1.6;
-            padding: 40px 20px;
+            padding: 100px 24px;
         }
 
         .container {
-            max-width: 1050px;
+            max-width: 1280px;
             margin: 0 auto;
         }
 
-        /* Hero Section */
+        /* High-End Enterprise Header Frame */
         header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #111a2e 0%, #070a14 100%);
-            border: 1px solid rgba(0, 210, 255, 0.2);
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            margin-bottom: 30px;
             position: relative;
+            text-align: center;
+            padding: 90px 40px;
+            background: linear-gradient(135deg, rgba(11, 19, 43, 0.6), rgba(3, 7, 18, 0.9));
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 24px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            margin-bottom: 70px;
             overflow: hidden;
         }
 
@@ -52,264 +64,274 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-blue), var(--terminal-green));
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--neon-purple), var(--neon-cyan), var(--neon-blue), transparent);
         }
 
-        h1 {
-            font-size: 2.5rem;
-            color: #fff;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
+        header h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--text-heading);
+            letter-spacing: -1.5px;
+            margin-bottom: 16px;
+            background: linear-gradient(180deg, #ffffff 30%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        h1 span {
-            color: var(--accent-blue);
-            text-shadow: 0 0 10px var(--accent-glow);
+        header p {
+            color: #94a3b8;
+            font-size: 1.35rem;
+            max-width: 750px;
+            margin: 0 auto 30px auto;
+            font-weight: 400;
+            letter-spacing: 0.3px;
         }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        /* Buttons */
-        .btn-container {
+        /* Skill Pill Architecture */
+        .skills-vault {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 14px;
             flex-wrap: wrap;
         }
 
-        .btn {
-            background: transparent;
-            color: var(--accent-blue);
-            text-decoration: none;
-            padding: 10px 24px;
-            border: 1px solid var(--accent-blue);
-            border-radius: 6px;
+        .skill-pill {
+            font-family: 'SF Mono', Consolas, monospace;
+            font-size: 0.75rem;
             font-weight: 600;
+            color: var(--neon-cyan);
+            background: rgba(0, 240, 255, 0.04);
+            padding: 8px 16px;
+            border-radius: 100px;
+            border: 1px solid rgba(0, 240, 255, 0.15);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
-            box-shadow: 0 0 5px var(--accent-glow);
         }
 
-        .btn:hover {
-            background: var(--accent-blue);
-            color: var(--bg-color);
-            box-shadow: 0 0 15px var(--accent-blue);
-            transform: translateY(-2px);
+        .skill-pill:hover {
+            background: rgba(0, 240, 255, 0.15);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+            transform: scale(1.05);
         }
 
-        /* Section Layout */
-        .section-title {
-            font-size: 1.5rem;
-            margin: 40px 0 20px 0;
-            color: #fff;
-            border-left: 4px solid var(--accent-blue);
-            padding-left: 12px;
+        /* Modern Grid Headers */
+        .grid-header {
             display: flex;
             align-items: center;
+            gap: 24px;
+            margin-bottom: 40px;
         }
 
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        .grid-title {
+            font-family: 'SF Mono', Consolas, monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
         }
 
-        /* Skills Grid */
-        .skills-grid {
+        .grid-line {
+            flex-grow: 1;
+            height: 1px;
+            background: linear-gradient(to right, rgba(0, 240, 255, 0.25), transparent);
+        }
+
+        /* Advanced Layout Grid */
+        .portfolio-matrix {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-            gap: 12px;
-            margin-bottom: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 32px;
         }
 
-        .skill-badge {
-            background: rgba(0, 210, 255, 0.07);
-            border: 1px solid rgba(0, 210, 255, 0.2);
-            color: var(--accent-blue);
-            padding: 10px;
-            text-align: center;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .project-card {
-            background-color: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 20px;
-            transition: all 0.3s ease;
+        /* Glassmorphic Lab Architecture Cards */
+        .engineering-node {
+            background: var(--surface-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            text-decoration: none;
+            color: var(--text-body);
+            transition: all 0.5s cubic-bezier(0.15, 0.85, 0.45, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 15px 35px var(--card-shadow), inset 0 1px 0px rgba(255, 255, 255, 0.05);
             position: relative;
         }
 
-        .project-card:hover {
-            border-color: var(--accent-blue);
-            box-shadow: 0 0 15px var(--accent-glow);
-            transform: translateY(-3px);
+        .engineering-node::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 1.5px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent, rgba(0, 240, 255, 0.1));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            transition: all 0.5s ease;
         }
 
-        .project-card h3 {
-            color: #fff;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .project-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .status-dot {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background-color: var(--terminal-green);
-            border-radius: 50%;
-            margin-right: 6px;
-            box-shadow: 0 0 8px var(--terminal-green);
-        }
-
-        /* Labs & Certs Lists */
-        .lab-list, .cert-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 10px;
-            list-style: none;
-        }
-
-        .lab-list li, .cert-list li {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 12px 15px;
-            border-radius: 6px;
-            border-left: 3px solid var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .lab-list li:nth-child(-n+3) {
-            border-left-color: var(--accent-blue);
-        }
-
-        /* Footer Info */
-        .footer-info {
+        .node-meta {
+            font-family: 'SF Mono', Consolas, monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--neon-dim);
+            margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 10px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-family: 'Courier New', Courier, monospace;
+            align-items: center;
         }
 
-        @media (max-width: 600px) {
-            .footer-info {
-                flex-direction: column;
-                text-align: center;
+        .node-status {
+            width: 6px;
+            height: 6px;
+            background-color: var(--neon-cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--neon-cyan);
+        }
+
+        .engineering-node h3 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: var(--text-heading);
+            letter-spacing: -0.3px;
+            transition: all 0.3s ease;
+        }
+
+        .engineering-node p {
+            color: #94a3b8;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Elegant Micro-animations and Hover States */
+        .engineering-node:hover {
+            transform: translateY(-8px) scale(1.01);
+            background: var(--surface-glass-hover);
+            border-color: rgba(0, 240, 255, 0.4);
+            box-shadow: 0 30px 60px rgba(0, 240, 255, 0.15);
+        }
+
+        .engineering-node:hover h3 {
+            color: var(--neon-cyan);
+            transform: translateX(4px);
+        }
+
+        .engineering-node:hover::before {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));
+        }
+
+        /* Responsive Adapters */
+        @media (max-width: 768px) {
+            body {
+                padding: 50px 16px;
+            }
+            header {
+                padding: 60px 20px;
+            }
+            header h1 {
+                font-size: 2.75rem;
+            }
+            .portfolio-matrix {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+    <div class="container">
+        <header>
+            <h1>Freshta Habib</h1>
+            <p>Cloud Security Operations & Infrastructure Systems Architecture Portfolio</p>
+            
+            <div class="skills-vault">
+                <span class="skill-pill">Linux Engineering</span>
+                <span class="skill-pill">AWS Cloud Security</span>
+                <span class="skill-pill">Network Reconnaissance</span>
+                <span class="skill-pill">Log Analysis Architecture</span>
+                <span class="skill-pill">Access Control (IAM)</span>
+            </div>
+        </header>
 
-    <header>
-        <h1>Freshta <span>Habib</span></h1>
-        <div class="subtitle">~$ security_analyst --role "Cloud & Infrastructure Defense"</div>
-        <div class="btn-container">
-            <a href="mailto:freshtahabib77@gmail.com" class="btn">Contact Engineer</a>
-            <a href="https://github.com/freshtahabib77-ops" target="_blank" class="btn">GitHub Profile</a>
+        <div class="grid-header">
+            <h2 class="grid-title">Production Engineering Matrix</h2>
+            <div class="grid-line"></div>
         </div>
-    </header>
+        
+        <div class="portfolio-matrix">
+            <a href="https://docs.google.com/document/d/18BOmrMRDjXjDReDicf5_lJb09gXvd_4S9ZCF4rRHvZY/edit?usp=sharing" target="_blank" class="engineering-node">
+                <div class="node-meta">SEC-OPS // NODE_01 <div class="node-status"></div></div>
+                <h3>Lab 1: Scan and Secure a Server</h3>
+                <p>Deploying cloud host structures, configuring administrative terminal sessions, running exposure network sweeps, and patching network boundaries.</p>
+            </a>
 
-    <div class="card">
-        <p>
-            I am a cybersecurity and cloud systems student gaining deep, hands-on technical proficiency through AWS deployments, Linux systems hardening, and real-world network infrastructure tracking. Focused on constructing safe cloud environments, tracking active server surfaces, and analyzing active log directories to build resilient operational perimeters. Aiming to pivot these hands-on engineering competencies into an advanced AWS Systems Management or Enterprise Incident Response pathway.
-        </p>
-    </div>
+            <a href="https://docs.google.com/document/d/1tfahSqxeM_9DUJN6pJ6itomYt8DbQm-ajnuOyt4cJuM/edit?usp=sharing" target="_blank" class="engineering-node">
+                <div class="node-meta">IAM-AUTH // NODE_02 <div class="node-status"></div></div>
+                <h3>Lab 2: User and Group Management</h3>
+                <p>Enforcing role-based access frameworks, handling complex system groups, and tracking granular credential profiles.</p>
+            </a>
 
-    <h2 class="section-title">Technical Capabilities</h2>
-    <div class="skills-grid">
-        <div class="skill-badge">AWS EC2 / VPC</div>
-        <div class="skill-badge">Linux Admin</div>
-        <div class="skill-badge">Network Security</div>
-        <div class="skill-badge">Nmap Scanning</div>
-        <div class="skill-badge">Log Analysis</div>
-        <div class="skill-badge">GitHub / Git Ops</div>
-        <div class="skill-badge">Python</div>
-        <div class="skill-badge">Threat Mitigation</div>
-    </div>
+            <a href="https://docs.google.com/document/d/1RNfJJnAhA06HSYHXNd8wrCG44OcDIgjGLohW_yN8tiQ/edit?usp=sharing" target="_blank" class="engineering-node">
+                <div class="node-meta">NET-ENG // NODE_03 <div class="node-status"></div></div>
+                <h3>Lab 3: Network Configuration</h3>
+                <p>Auditing runtime routing environments, mapping interface parameter tables, and investigating loopback profiles.</p>
+            </a>
 
-    <h2 class="section-title">Active Security Projects</h2>
-    <div class="projects-grid">
-        <div class="project-card">
-            <h3><span class="status-dot"></span>AWS Cybersecurity Lab Suite</h3>
-            <p>Architecting live cloud testing sandboxes utilizing Ubuntu EC2 instances to dynamically analyze vulnerable services, capture live telemetry, and implement security group perimeter controls.</p>
-        </div>
-        <div class="project-card">
-            <h3><span class="status-dot"></span>Linux Security & Log Auditing</h3>
-            <p>Investigating active system run-times, hunting down unauthorized background processes, and verifying account permission parameters to maintain OS integrity metrics.</p>
-        </div>
-        <div class="project-card">
-            <h3><span class="status-dot"></span>Network Surface Analysis</h3>
-            <p>Deploying specialized network tools to sweep instance targets, safely uncovering exposed daemon ports, and implementing hardening parameters across public-facing infrastructure.</p>
-        </div>
-        <div class="project-card">
-            <h3><span class="status-dot"></span>Multimodal AI Trust Engine</h3>
-            <p>Developing advanced testing environments targeting media authenticity verification and cryptographic asset protections across complex dataset structures.</p>
-        </div>
-    </div>
+            <a href="https://docs.google.com/document/d/1H1N99MTmHUx3Zbc3p1gYuvCEqJyDQYV55WmJC9nc7Ig/edit?usp=sharing" target="_blank" class="engineering-node">
+                <div class="node-meta">SYS-HARDEN // NODE_04 <div class="node-status"></div></div>
+                <h3>Lab 4: Web Server Security</h3>
+                <p>Securing application daemon parameters, organizing system root permissions, and minimizing vector footprints.</p>
+            </a>
 
-    <h2 class="section-title">Applied Engineering Labs</h2>
-    <div class="card">
-        <ul class="lab-list">
-            <li>Lab 1: Linux Fundamentals</li>
-            <li>Lab 2: User and Group Management</li>
-            <li>Lab 3: Network Configuration</li>
-            <li>Lab 4: Web Server Security</li>
-            <li>Lab 5: Log Analysis</li>
-            <li>Lab 6: AWS Security Monitoring</li>
-            <li>Lab 7: Linux User Enumeration</li>
-            <li>Lab 8: File Permissions and Ownership</li>
-            <li>Lab 9: Process Monitoring and Analysis</li>
-            <li>Lab 10: Security Assessment Project</li>
-        </ul>
-    </div>
+            <a href="https://docs.google.com/document/d/14Igumk1-akQg7nDNS552nsyjTy-3Fjq-G-46Vxt5_zo/edit?usp=sharing" target="_blank" class="engineering-node">
+                <div class="node-meta">FORENSICS // NODE_05 <div class="node-status"></div></div>
+                <h3>Lab 5: Log Analysis</h3>
+                <p>Parsing raw authentication payloads, isolating complex malicious sequences, and auditing transaction timestamps.</p>
+            </a>
 
-    <h2 class="section-title">Industry Certification Matrix</h2>
-    <div class="card">
-        <ul class="cert-list">
-            <li>🛡️ AWS Certified Cloud Practitioner <span style="color: var(--accent-blue); font-size: 0.8rem;">[In Progress]</span></li>
-            <li>🛡️ CompTIA Security+ <span style="color: var(--text-muted); font-size: 0.8rem;">[Targeted]</span></li>
-            <li>🛡️ Cisco CCNA <span style="color: var(--text-muted); font-size: 0.8rem;">[Targeted]</span></li>
-        </ul>
-    </div>
+            <a href="https://docs.google.com/document/d/1dl56PNTo4fWIseqnfFo4Mb8Pyo8QzjSJlnBr3SyQKuk/edit?usp=sharing" target="_blank" class="engineering-node">
+                <div class="node-meta">CLOUD-MON // NODE_06 <div class="node-status"></div></div>
+                <h3>Lab 6: AWS Security Monitoring</h3>
+                <p>Configuring multi-tier metric capture logs, managing cloud-native alarm triggers, and mapping system alert rules.</p>
+            </a>
 
-    <div class="card" style="margin-bottom: 0;">
-        <div class="footer-info">
-            <div>SECURE CONNECTION: ACTIVE</div>
-            <div>Email: freshtahabib77@gmail.com</div>
-            <div>Console: github.com/freshtahabib77-ops</div>
+            <a href="https://docs.google.com/document/d/1jtePgdyDoxD_DiMz26jPJ3pHvEOL3lShH-EMlmN59Z4/edit?usp=sharing" target="_blank" class="engineering-node">
+                <div class="node-meta">AUDIT-OPS // NODE_07 <div class="node-status"></div></div>
+                <h3>Lab 7: Linux User Enumeration</h3>
+                <p>Investigating target privilege structures, tracking user system states, and validating account profiles.</p>
+            </a>
+
+            <a href="https://docs.google.com/document/d/1WAeE-DG3xKe7HIDQtY5raXKsFckot4yZRQMlfGJ2Myc/edit?usp=sharing" target="_blank" class="engineering-node">
+                <div class="node-meta">PERM-SEC // NODE_08 <div class="node-status"></div></div>
+                <h3>Lab 8: File Permissions and Ownership</h3>
+                <p>Enforcing absolute access parameters using access control command structures and validating file layouts.</p>
+            </a>
+
+            <a href="https://docs.google.com/document/d/1m9hTx7buugovfNPw89UIWCS27Y1JFltCHkxCmWjxvmg/edit?usp=sharing" target="_blank" class="engineering-node">
+                <div class="node-meta">KERN-DIAG // NODE_09 <div class="node-status"></div></div>
+                <h3>Lab 9: Process Monitoring and Analysis</h3>
+                <p>Debugging active processor spikes, terminating unauthorized processes, and analyzing daemon behavior tables.</p>
+            </a>
+
+            <a href="https://docs.google.com/document/d/1PqD869ppBbCtRLdSGZP8jNsGgg4gZ6FYn7-CAQnnnlU/edit?usp=sharing" target="_blank" class="engineering-node">
+                <div class="node-meta">RISK-MGMT // NODE_10 <div class="node-status"></div></div>
+                <h3>Lab 10: Security Assessment Project</h3>
+                <p>Conducting full-scale infrastructure penetration reviews, isolating active network processes, and remediating vectors.</p>
+            </a>
         </div>
     </div>
-
-</div>
 
 </body>
 </html>
